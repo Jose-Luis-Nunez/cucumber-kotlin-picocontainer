@@ -1,4 +1,4 @@
-package model
+package example1.model
 
 class Customer(
     private var name: String

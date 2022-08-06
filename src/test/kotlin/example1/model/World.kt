@@ -1,4 +1,4 @@
-package model
+package example1.model
 
 class World {
     private lateinit var customer: Customer
