@@ -1,18 +1,8 @@
 package example1.model
 
-class Item(
-    private var itemType: String,
-    private var price: Int
+data class Item(
+    var itemType: String = "",
+    var price: Int = 0
 ) {
-    fun getPrice(): Int {
-        return price
-    }
-
-    fun getItemType(): String {
-        return itemType
-    }
-
-    override fun toString(): String {
-        return itemType
-    }
+    override fun toString() = itemType
 }

@@ -1,19 +1,8 @@
 package example1.model
 
-class Customer(
-    private var name: String
+data class Customer(
+    var name: String = "",
+    var refund: Int = 0
 ) {
-    private var refund: Int = 0
-
-    fun refund(refund: Int) {
-        this.refund = refund
-    }
-
-    fun getRefunded(): Int {
-        return refund
-    }
-
-    override fun toString(): String {
-        return "name: $name , refund: $refund"
-    }
+    override fun toString() = "name: $name , refund: $refund"
 }
