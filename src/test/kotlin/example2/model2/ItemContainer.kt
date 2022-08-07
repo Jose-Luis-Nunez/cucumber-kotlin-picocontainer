@@ -1,4 +1,9 @@
 package example2.model2
 
-class ItemContainer : Item() {
-}
+data class ItemContainer(
+    override var itemType: String = "",
+    override var price: Long = 0
+) : Item(
+    itemType,
+    price
+)

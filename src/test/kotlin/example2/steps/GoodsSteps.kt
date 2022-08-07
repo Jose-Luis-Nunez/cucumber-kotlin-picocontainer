@@ -9,9 +9,9 @@ class GoodsSteps(
     private var item: ItemContainer
 ) {
     @Given("(.*) bought a (.*) for \\$(\\d+) in store$")
-    fun buy(name: String?, itemType: String?, price: Int) {
-        customer.setName(name)
-        item.setItemType(itemType)
-        item.setPrice(price)
+    fun buy(name: String, itemType: String, price: Long) {
+        customer.name = name
+        item.itemType = itemType
+        item.price = price
     }
 }

@@ -14,17 +14,17 @@ class CustomerSteps(
 ) {
     @When("^John Doe returns (.*) to the store$")
     fun returnItem(itemType: String) {
-        assertThat(item.getItemType(), CoreMatchers.`is`(itemType))
+        assertThat(item.itemType, CoreMatchers.`is`(itemType))
     }
 
     @And("shows receipt with price \\$(\\d+)$")
-    fun showReceipt(price: Int) {
-        customer.refund(item.getPrice())
-        assertThat(item.getPrice(), CoreMatchers.`is`(price))
+    fun showReceipt(price: Long) {
+        customer.refund = item.price
+        assertThat(item.price, CoreMatchers.`is`(price))
     }
 
     @Then("^customer will get \\$(\\d+) refunded from store$")
-    fun itemGetRefunded(expected: Int) {
-        assertThat(customer.getRefunded(), CoreMatchers.`is`(expected))
+    fun itemGetRefunded(expected: Long) {
+        assertThat(customer.refund, CoreMatchers.`is`(expected))
     }
 }
