@@ -1,10 +1,8 @@
 package example2.model2
 
-abstract class Item(
-    open var itemType: String,
-    open var price: Long
+data class Item(
+    var itemType: String = "",
+    var price: Long = 0
 ) {
-    override fun toString(): String {
-        return itemType
-    }
+    override fun toString() = itemType
 }

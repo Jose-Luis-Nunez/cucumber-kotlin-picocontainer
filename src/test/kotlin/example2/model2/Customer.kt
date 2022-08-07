@@ -1,10 +1,8 @@
 package example2.model2
 
-abstract class Customer(
-    open var name: String,
-    open var refund: Long
+data class Customer(
+    var name: String = "",
+    var refund: Long = 0
 ) {
-    override fun toString(): String {
-        return "name: $name , refund: $refund"
-    }
+    override fun toString() = "name: $name , refund: $refund"
 }
