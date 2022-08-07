@@ -1,9 +1,9 @@
-package steps
+package example1.steps
 
 import io.cucumber.java.en.Given
-import model.Customer
-import model.Item
-import model.World
+import example1.model.Customer
+import example1.model.Item
+import example1.model.World
 
 class GoodsStep(private val world: World) {
 
